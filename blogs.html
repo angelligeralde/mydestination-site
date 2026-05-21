@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Blogs & Articles | My Destination Tours and Travel</title>
+  <meta name="description" content="Travel guides, destination tips, and visa advice from My Destination Tours and Travel — your trusted travel agency in Antipolo, Rizal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contacts">
+        <a href="tel:863550222" class="topbar__item">
+          <i class="fa-solid fa-phone"></i>
+          <span>8635-5022</span>
+        </a>
+        <a href="tel:+639338185552" class="topbar__item">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>0933-818-5552</span>
+        </a>
+        <a href="tel:+639279323522" class="topbar__item">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>0927-932-3522</span>
+        </a>
+        <a href="mailto:sales@travelwithmyd.com" class="topbar__item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>sales@travelwithmyd.com</span>
+        </a>
+        <a href="https://facebook.com/mydestinationph" class="topbar__item" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>facebook.com/mydestinationph</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="logo.png" alt="My Destination Tours and Travel" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="tour-packages.html">Tour Packages <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="index.html#contact">Visa Consultancy <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="index.html#contact">Japan Tourist Visa</a></li>
+            <li><a href="index.html#contact">Korea Tourist Visa</a></li>
+            <li><a href="index.html#contact">USA Tourist Visa</a></li>
+            <li><a href="index.html#contact">Canada Tourist Visa and ETA</a></li>
+            <li><a href="index.html#contact">Schengen Visa</a></li>
+            <li><a href="index.html#contact">India Visa</a></li>
+          </ul>
+        </li>
+        <li><a href="blogs.html" class="active">Blogs</a></li>
+        <li class="has-dropdown">
+          <a href="#">Resources <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="index.html#contact">Quote Request</a></li>
+            <li><a href="#">Agreements</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero__bg" style="background-image: url('images/hero1.jpg');"></div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__content">
+      <p class="breadcrumb"><a href="index.html">Home</a> › Blogs</p>
+      <h1>Travel Blogs &amp; Articles</h1>
+      <p>Destination guides, travel tips, and visa advice to help you plan your next adventure.</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG LISTING ===== -->
+  <section class="blogs-section">
+    <div class="container">
+
+      <!-- Filter tabs -->
+      <div class="blogs-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="international">International</button>
+        <button class="filter-btn" data-filter="domestic">Domestic</button>
+        <button class="filter-btn" data-filter="travel-tips">Travel Tips</button>
+        <button class="filter-btn" data-filter="visa-guides">Visa Guides</button>
+      </div>
+
+      <div class="blogs-grid" id="blogsGrid">
+
+        <!-- Taiwan -->
+        <article class="blog-card" data-category="international">
+          <a href="taiwan.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/taiwan.jpg');"></div>
+            <span class="blog-card__tag">International</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Taiwan &nbsp;·&nbsp; <i class="fa-solid fa-calendar-days"></i> Mar 22, 2026</p>
+            <h2 class="blog-card__title"><a href="taiwan.html">Taiwan: The Underrated Gem That's Taking Over Filipino Travel Feeds</a></h2>
+            <p class="blog-card__excerpt">The food culture of Japan, the night market energy of Southeast Asia, and the drama of Taroko Gorge — at prices lower than Tokyo or Seoul.</p>
+            <a href="taiwan.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Vietnam -->
+        <article class="blog-card" data-category="international">
+          <a href="vietnam.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/vietnam.jpg');"></div>
+            <span class="blog-card__tag">International</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Vietnam &nbsp;·&nbsp; <i class="fa-solid fa-calendar-days"></i> Mar 29, 2026</p>
+            <h2 class="blog-card__title"><a href="vietnam.html">Vietnam: Why It's the Hottest Destination for Filipinos Right Now</a></h2>
+            <p class="blog-card__excerpt">Bookings from the Philippines surged 193% in 2025. Ha Long Bay, Hoi An, pho, banh mi, and visa-free access — here's why Vietnam is unmissable.</p>
+            <a href="vietnam.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Travel Insurance -->
+        <article class="blog-card" data-category="travel-tips">
+          <a href="travel-insurance.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/travel-insurance.jpg');"></div>
+            <span class="blog-card__tag blog-card__tag--tips">Travel Tips</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-shield-halved"></i> Travel Tips &nbsp;·&nbsp; <i class="fa-solid fa-calendar-days"></i> Apr 5, 2026</p>
+            <h2 class="blog-card__title"><a href="travel-insurance.html">Why Travel Insurance Is Non-Negotiable for Filipino Travelers</a></h2>
+            <p class="blog-card__excerpt">A hospital bill abroad can reach ₱2 million. Travel insurance costs ₱500–₱5,000. Here's what it covers and why skipping it is a mistake you'll only make once.</p>
+            <a href="travel-insurance.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Visa Denied -->
+        <article class="blog-card" data-category="visa-guides">
+          <a href="visa-denied.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/visa-denied.jpg');"></div>
+            <span class="blog-card__tag blog-card__tag--visa">Visa Guides</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-passport"></i> Visa Guides &nbsp;·&nbsp; <i class="fa-solid fa-calendar-days"></i> Apr 12, 2026</p>
+            <h2 class="blog-card__title"><a href="visa-denied.html">What to Do If Your Tourist Visa Gets Denied — Schengen, US, UK, and Japan</a></h2>
+            <p class="blog-card__excerpt">A visa denial is feedback, not a final answer. Here's how to respond to rejections from the most popular visa destinations for Filipino travelers.</p>
+            <a href="visa-denied.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Getting Offloaded -->
+        <article class="blog-card" data-category="travel-tips">
+          <a href="offloaded.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/offloaded.jpg');"></div>
+            <span class="blog-card__tag blog-card__tag--tips">Travel Tips</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-shield-halved"></i> Travel Tips &nbsp;·&nbsp; <i class="fa-solid fa-calendar-days"></i> Apr 19, 2026</p>
+            <h2 class="blog-card__title"><a href="offloaded.html">Getting Offloaded: What Really Happens at NAIA and How to Avoid It</a></h2>
+            <p class="blog-card__excerpt">In 2023, over 36,000 Filipinos were offloaded at NAIA — roughly 100 per day. Here's exactly what immigration officers check, and how to make sure you board.</p>
+            <a href="offloaded.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Japan -->
+        <article class="blog-card" data-category="international">
+          <a href="japan.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/japan.jpg');"></div>
+            <span class="blog-card__tag">International</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Japan</p>
+            <h2 class="blog-card__title"><a href="japan.html">Japan Travel Guide: Temples, Mt. Fuji &amp; Cherry Blossoms</a></h2>
+            <p class="blog-card__excerpt">From the neon streets of Tokyo to the ancient temples of Kyoto and the iconic silhouette of Mt. Fuji — Japan is a journey that stays with you forever.</p>
+            <a href="japan.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Bali -->
+        <article class="blog-card" data-category="international">
+          <a href="bali.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/bali.jpg');"></div>
+            <span class="blog-card__tag">International</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</p>
+            <h2 class="blog-card__title"><a href="bali.html">Bali Travel Guide: Gates of Heaven, Ubud &amp; Beyond</a></h2>
+            <p class="blog-card__excerpt">The Island of the Gods delivers sacred temples on cliff edges, terraced rice paddies, world-class surf, and sunsets that stop you in your tracks.</p>
+            <a href="bali.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- South Korea -->
+        <article class="blog-card" data-category="international">
+          <a href="korea.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/korea.jpg');"></div>
+            <span class="blog-card__tag">International</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> South Korea</p>
+            <h2 class="blog-card__title"><a href="korea.html">South Korea Travel Guide: Palaces, Street Food &amp; Jeju Island</a></h2>
+            <p class="blog-card__excerpt">Where centuries-old palaces stand beside buzzing modern cities — South Korea is a destination that captivates Filipino travelers like nowhere else.</p>
+            <a href="korea.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Palawan -->
+        <article class="blog-card" data-category="domestic">
+          <a href="palawan.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/palawan.jpg');"></div>
+            <span class="blog-card__tag blog-card__tag--domestic">Domestic</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Palawan, Philippines</p>
+            <h2 class="blog-card__title"><a href="palawan.html">Palawan Travel Guide: El Nido, Coron &amp; the Best of the Last Frontier</a></h2>
+            <p class="blog-card__excerpt">Crystal lagoons, limestone karst cliffs, and the clearest water in the Philippines — Palawan consistently tops the world's best island lists for good reason.</p>
+            <a href="palawan.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Siargao -->
+        <article class="blog-card" data-category="domestic">
+          <a href="siargao.html" class="blog-card__img-link">
+            <div class="blog-card__img" style="background-image: url('images/siargao.jpg');"></div>
+            <span class="blog-card__tag blog-card__tag--domestic">Domestic</span>
+          </a>
+          <div class="blog-card__body">
+            <p class="blog-card__meta"><i class="fa-solid fa-location-dot"></i> Siargao, Philippines</p>
+            <h2 class="blog-card__title"><a href="siargao.html">Siargao Travel Guide: Sugba Lagoon, Cloud 9 &amp; Island Hopping</a></h2>
+            <p class="blog-card__excerpt">The surf capital of the Philippines is more than waves — emerald lagoons, pristine sandbars, rock pools, and a laid-back island vibe that's impossible to leave.</p>
+            <a href="siargao.html" class="blog-card__link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA STRIP ===== -->
+  <section class="blogs-cta">
+    <div class="container blogs-cta__inner">
+      <div>
+        <h2>Ready to make your trip a reality?</h2>
+        <p>Our team handles flights, accommodations, tours, and visa assistance — all in one place.</p>
+      </div>
+      <a href="index.html#contact" class="btn btn--primary">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-link">
+            <img src="logo.png" alt="My Destination Tours and Travel" class="footer__logo-img" />
+          </a>
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="index.html#contact">Visa Assistance</a></li>
+            <li><a href="blogs.html">Travel Blogs and Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer__accreds">
+          <h4>Accreditations</h4>
+          <div class="accred-list">
+            <div class="accred-item">
+              <strong>PTAA Member No. RE-2024-335</strong>
+              <p>My Destination is a proud member of PTAA – Philippine Travel Agencies Association (The National Travel Association). Membership valid until December 31, 2026.</p>
+            </div>
+            <div class="accred-item">
+              <strong>DOT-R4A-TTA-00013-2020</strong>
+              <p>My Destination is an accredited travel and tours agency by the Department of Tourism of the Republic of the Philippines. Accreditation is valid until June 30, 2027.</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <h4>Address and Contact Information</h4>
+          <ul>
+            <li>3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal</li>
+            <li><a href="mailto:sales@travelwithmyd.com">sales@travelwithmyd.com</a></li>
+            <li><a href="tel:863550222">8635-5022 (PLDT)</a></li>
+            <li><a href="tel:+639338185552">0933-818-5552 (Smart/Sun)</a></li>
+            <li><a href="tel:+639279323522">0927-932-3522 (Globe)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 My Destination Tours and Travel. All rights reserved.</p>
+        <p>Antipolo City, Rizal, Philippines</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        blogCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

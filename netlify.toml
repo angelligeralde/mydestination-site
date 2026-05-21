@@ -1,0 +1,36 @@
+[build]
+  publish = "."
+
+# Old WordPress URL redirects → new static pages
+[[redirects]]
+  from = "/domestic-destination/getting-offloaded-what-really-happens-at-naia-and-how-to-avoid-it/"
+  to = "/offloaded.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/what-to-do-if-your-tourist-visa-gets-denied-schengen-us-uk-and-japan/"
+  to = "/visa-denied.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/why-travel-insurance-is-non-negotiable-for-filipino-travelers/"
+  to = "/travel-insurance.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/vietnam-why-its-the-hottest-destination-for-filipinos-right-now/"
+  to = "/vietnam.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/taiwan-the-underrated-gem-thats-taking-over-filipino-travel-feeds/"
+  to = "/taiwan.html"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Destination Tours and Travel | Philippines Travel Agency</title>
+  <meta name="description" content="DOT-accredited travel agency in Antipolo. Flights, hotels, tours, visa assistance, travel insurance, and passport services. Your personal travel partner." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contacts">
+        <a href="tel:863550222" class="topbar__item">
+          <i class="fa-solid fa-phone"></i>
+          <span>8635-5022</span>
+        </a>
+        <a href="tel:+639338185552" class="topbar__item">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>0933-818-5552</span>
+        </a>
+        <a href="tel:+639279323522" class="topbar__item">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span>0927-932-3522</span>
+        </a>
+        <a href="mailto:sales@travelwithmyd.com" class="topbar__item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>sales@travelwithmyd.com</span>
+        </a>
+        <a href="https://facebook.com/mydestinationph" class="topbar__item" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>facebook.com/mydestinationph</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <img src="logo.png" alt="My Destination Tours and Travel" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="tour-packages.html">Tour Packages <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#contact">Visa Consultancy <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="#contact">Japan Tourist Visa</a></li>
+            <li><a href="#contact">Korea Tourist Visa</a></li>
+            <li><a href="#contact">USA Tourist Visa</a></li>
+            <li><a href="#contact">Canada Tourist Visa and ETA</a></li>
+            <li><a href="#contact">Schengen Visa</a></li>
+            <li><a href="#contact">India Visa</a></li>
+          </ul>
+        </li>
+
+        <li><a href="blogs.html">Blogs</a></li>
+
+        <li class="has-dropdown">
+          <a href="#">Resources <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="#contact">Quote Request</a></li>
+            <li><a href="#">Agreements</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__slides">
+      <div class="hero__slide active" style="background-image: url('images/palawan.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/japan.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/bali.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/siargao.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/korea.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/hero1.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/hero2.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/hero3.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/hero4.jpg')"></div>
+      <div class="hero__slide" style="background-image: url('images/hero5.jpg')"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__tagline">DOT-Accredited · PTAA Member · Serving Antipolo Since 2018</p>
+      <h1 class="hero__title">Your Journey Begins<br />with <span>My Destination</span></h1>
+      <p class="hero__subtitle">Personalized travel plans crafted with care — from flights and hotels to visa assistance and beyond.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero__dots" id="heroDots">
+      <button class="hero__dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="hero__dot" data-index="3" aria-label="Slide 4"></button>
+      <button class="hero__dot" data-index="4" aria-label="Slide 5"></button>
+      <button class="hero__dot" data-index="5" aria-label="Slide 6"></button>
+      <button class="hero__dot" data-index="6" aria-label="Slide 7"></button>
+      <button class="hero__dot" data-index="7" aria-label="Slide 8"></button>
+      <button class="hero__dot" data-index="8" aria-label="Slide 9"></button>
+      <button class="hero__dot" data-index="9" aria-label="Slide 10"></button>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">What We Offer</p>
+        <h2 class="section__title">Complete Travel Services</h2>
+        <p class="section__desc">Everything you need for a seamless journey, all in one place.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card">
+          <div class="service-card__icon">✈️</div>
+          <h3>Flight Booking</h3>
+          <p>Local and international flights at competitive rates. We handle seat selection, baggage, and special requests.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">🏨</div>
+          <h3>Hotel & Accommodation</h3>
+          <p>Budget to luxury stays worldwide. We match you with accommodations that fit your style and budget.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">🗺️</div>
+          <h3>Tour Packages</h3>
+          <p>Curated land and sea tours with thoughtfully planned itineraries. Group and private options available.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">🛡️</div>
+          <h3>Travel Insurance</h3>
+          <p>Comprehensive coverage for your trip. Medical, cancellation, baggage, and emergency assistance included.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">📋</div>
+          <h3>Visa Assistance</h3>
+          <p>Expert guidance for tourist, business, and immigrant visas. We prepare and review your documents.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">📄</div>
+          <h3>Document Services</h3>
+          <p>Passport applications, PSA documents, NBI Clearance assistance — all your travel document needs covered.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTINATIONS ===== -->
+  <section class="destinations section" id="destinations">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Popular Getaways</p>
+        <h2 class="section__title">Featured Destinations</h2>
+        <p class="section__desc">From local island-hopping to international adventures — where do you want to go?</p>
+      </div>
+      <div class="destinations__grid">
+
+        <div class="dest-card dest-card--large">
+          <div class="dest-card__img">
+            <img src="images/palawan.jpg" alt="Palawan, Philippines" />
+          </div>
+          <div class="dest-card__info">
+            <span class="dest-card__tag">Philippines</span>
+            <h3>Palawan</h3>
+            <p>Turquoise lagoons, dramatic limestone cliffs, world-class island hopping</p>
+            <a href="palawan.html" class="dest-card__link">More Information →</a>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="images/japan.jpg" alt="Japan" />
+          </div>
+          <div class="dest-card__info">
+            <span class="dest-card__tag">International</span>
+            <h3>Japan</h3>
+            <p>Mt. Fuji, cherry blossoms, ancient temples, and vibrant city life</p>
+            <a href="japan.html" class="dest-card__link">More Information →</a>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="images/bali.jpg" alt="Bali, Indonesia" />
+          </div>
+          <div class="dest-card__info">
+            <span class="dest-card__tag">International</span>
+            <h3>Bali, Indonesia</h3>
+            <p>Gates of Heaven, sacred temples, lush rice terraces, beach clubs</p>
+            <a href="bali.html" class="dest-card__link">More Information →</a>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="images/siargao.jpg" alt="Siargao, Philippines" />
+          </div>
+          <div class="dest-card__info">
+            <span class="dest-card__tag">Philippines</span>
+            <h3>Siargao</h3>
+            <p>Crystal-clear lagoons, Cloud 9 surfing, and island-hopping paradise</p>
+            <a href="siargao.html" class="dest-card__link">More Information →</a>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="dest-card__img">
+            <img src="images/korea.jpg" alt="South Korea" />
+          </div>
+          <div class="dest-card__info">
+            <span class="dest-card__tag">International</span>
+            <h3>South Korea</h3>
+            <p>Historic palaces, K-culture, Jeju Island, and street food adventures</p>
+            <a href="korea.html" class="dest-card__link">More Information →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="whyus section">
+    <div class="container">
+      <div class="whyus__inner">
+        <div class="whyus__text">
+          <p class="section__label">Why Choose Us</p>
+          <h2 class="section__title">Travel with Confidence</h2>
+          <p>We're more than a booking service — we're your personal travel partner. Every itinerary is crafted with thoughtfulness, checked and double-checked so your trip runs exactly as envisioned.</p>
+          <ul class="whyus__list">
+            <li><span>🏅</span> Government-accredited by the Philippines DOT</li>
+            <li><span>👥</span> Highly trained and passionate travel consultants</li>
+            <li><span>💰</span> Fair pricing for both budget and premium travelers</li>
+            <li><span>🤝</span> Personal touch from inquiry to safe return</li>
+            <li><span>🌏</span> Strong network of local and international partners</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Contact Us</a>
+        </div>
+        <div class="whyus__visual">
+          <div class="whyus__card whyus__card--1">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy Travelers</div>
+          </div>
+          <div class="whyus__card whyus__card--2">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Destinations</div>
+          </div>
+          <div class="whyus__card whyus__card--3">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Service Rating</div>
+          </div>
+          <div class="whyus__card whyus__card--4">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__visual">
+          <div class="about__img-wrap">
+            <div class="about__img"></div>
+          </div>
+          <div class="about__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.1588649192354!2d121.1338775!3d14.624675499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9dedb461f7b%3A0x26215fddb9be5c8c!2sMy%20Destination%20Tours%20and%20Travel!5e1!3m2!1sen!2sph!4v1779356072375!5m2!1sen!2sph" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__label">About Us</p>
+          <h2 class="section__title">A Boutique Gateway with a Personal Touch</h2>
+          <p>My Destination Tours and Travel is a DOT-accredited boutique travel agency based in Antipolo City, Rizal. We believe travel should be seamless, personal, and memorable — from your first inquiry to the moment you arrive back home.</p>
+          <p>Our passionate team of travel consultants brings expertise, dedication, and genuine care to every booking. We partner with trusted airlines, hotels, and tour operators to deliver exceptional value at honest prices.</p>
+          <div class="about__accreds">
+            <div class="accred-tile">
+              <div class="accred-tile__header">
+                <img src="images/dot-logo.png" alt="Department of Tourism Philippines" class="accred-logo" />
+              </div>
+              <p>DOT Accreditation No. DOT-R4A-TTA-00013-2020 | My Destination is an accredited travel and tours agency by the Department of Tourism of the Republic of the Philippines. Accreditation is valid until June 30, 2027.</p>
+            </div>
+            <div class="accred-tile">
+              <div class="accred-tile__header">
+                <img src="images/ptaa-logo.png" alt="Philippine Travel Agencies Association" class="accred-logo" />
+              </div>
+              <p>Member No. RE-2024-335 | My Destination is a proud member of PTAA - Philippine Travel Agencies Association (The National Travel Association). Membership valid until December 31, 2026.</p>
+            </div>
+            <div class="accred-tile">
+              <div class="accred-tile__header">
+                <img src="images/rtaa-logo.png" alt="Rizal Travel Agencies Association" class="accred-logo" />
+              </div>
+              <p>My Destination is a proud member of RTAA - Rizal Travel Agencies Association. Membership valid until December 31, 2026.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / BOOKING FORM ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Get in Touch</p>
+        <h2 class="section__title">Plan Your Next Adventure</h2>
+        <p class="section__desc">Fill out the form below and one of our travel consultants will get back to you within 24 hours.</p>
+      </div>
+      <div class="contact__inner">
+        <form class="contact__form" name="booking-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="booking-inquiry" />
+          <input type="hidden" name="bot-field" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="juan@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone / Viber Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed *</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="flights">Flight Booking</option>
+                <option value="hotel">Hotel / Accommodation</option>
+                <option value="tour-package">Tour Package</option>
+                <option value="visa">Visa Assistance</option>
+                <option value="insurance">Travel Insurance</option>
+                <option value="documents">Document Services (Passport/PSA/NBI)</option>
+                <option value="full-package">Full Travel Package</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" id="destination" name="destination" placeholder="Where do you want to go?" />
+            </div>
+            <div class="form-group">
+              <label for="travel-date">Preferred Travel Date</label>
+              <input type="date" id="travel-date" name="travel-date" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Number of travelers, budget range, special requests..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Send Inquiry ✈</button>
+        </form>
+
+        <div class="contact__info">
+          <h3>Reach Us Directly</h3>
+
+          <div class="contact__item">
+            <span class="contact__icon">📍</span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>3F SM Center Downtown Antipolo<br />Marcos Highway, Antipolo City, Rizal</p>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="contact__icon">📞</span>
+            <div>
+              <strong>Call</strong>
+              <p>
+                <a href="tel:863550222">8635-5022 (Landline)</a><br />
+                <a href="tel:+639338185552">0933-818-5552 (Mobile &amp; Viber)</a><br />
+                <a href="tel:+639279323522">0927-932-3522 (Mobile)</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="contact__icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:sales@travelwithmyd.com">sales@travelwithmyd.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="contact__icon">🕐</span>
+            <div>
+              <strong>Office Hours</strong>
+              <p>Monday – Sunday<br />11:00 AM – 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact__social">
+            <a href="https://facebook.com/mydestinationph" class="social-btn social-btn--fb" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://m.me/mydestinationph" class="social-btn social-btn--msg" target="_blank" rel="noopener">Messenger</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo-link">
+            <img src="logo.png" alt="My Destination Tours and Travel" class="footer__logo-img" />
+          </a>
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="#contact">Visa Assistance</a></li>
+            <li><a href="blogs.html">Travel Blogs and Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer__accreds">
+          <h4>Accreditations</h4>
+          <div class="accred-list">
+            <div class="accred-item">
+              <strong>PTAA Member No. RE-2024-335</strong>
+              <p>My Destination is a proud member of PTAA – Philippine Travel Agencies Association (The National Travel Association). Membership valid until December 31, 2026.</p>
+            </div>
+            <div class="accred-item">
+              <strong>DOT-R4A-TTA-00013-2020</strong>
+              <p>My Destination is an accredited travel and tours agency by the Department of Tourism of the Republic of the Philippines. Accreditation is valid until June 30, 2027.</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <h4>Address and Contact Information</h4>
+          <ul>
+            <li>3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal</li>
+            <li><a href="mailto:sales@travelwithmyd.com">sales@travelwithmyd.com</a></li>
+            <li><a href="tel:863550222">8635-5022 (PLDT)</a></li>
+            <li><a href="tel:+639338185552">0933-818-5552 (Smart/Sun)</a></li>
+            <li><a href="tel:+639279323522">0927-932-3522 (Globe)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 My Destination Tours and Travel. All rights reserved.</p>
+        <p>Antipolo City, Rizal, Philippines</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
