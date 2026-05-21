@@ -1725,3 +1725,82 @@ img { max-width: 100%; display: block; }
   .whyus__visual { grid-template-columns: 1fr 1fr; }
   .stat-number { font-size: 1.8rem; }
 }
+
+/* ===== THANK YOU PAGE ===== */
+.thankyou {
+  padding: 140px 0 100px;
+  background: linear-gradient(135deg, #f7faf8 0%, #eaf5ef 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.thankyou__inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.thankyou__icon {
+  font-size: 5rem;
+  color: var(--primary);
+  margin-bottom: 24px;
+  animation: pop 0.5s ease;
+}
+@keyframes pop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.thankyou h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+.thankyou__lead {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+.thankyou__contact {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 36px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  margin-bottom: 36px;
+  text-align: left;
+}
+.thankyou__contact h3 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  color: var(--primary);
+}
+.thankyou__contact p {
+  line-height: 2;
+  font-size: 1rem;
+  color: #333;
+}
+.thankyou__contact i {
+  width: 22px;
+  color: var(--primary);
+  margin-right: 6px;
+}
+.thankyou__contact a {
+  color: #333;
+  text-decoration: none;
+}
+.thankyou__contact a:hover {
+  color: var(--primary);
+}
+.thankyou__cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .thankyou { padding: 110px 0 70px; }
+  .thankyou h1 { font-size: 1.7rem; }
+  .thankyou__icon { font-size: 4rem; }
+  .thankyou__contact { padding: 22px; }
+}
