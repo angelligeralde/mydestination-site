@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Block thin / utility pages from indexing
+Disallow: /thank-you.html
+Disallow: /offloaded.html
+Disallow: /visa-denied.html
+Disallow: /booking-agreement.html
+Disallow: /visa-assistance-agreement.html
+Disallow: /card-authorization-form.html
+Disallow: /refund-acknowledgement.html
+
+# Sitemap
+Sitemap: https://mydestinationtoursandtravel.com/sitemap.xml
