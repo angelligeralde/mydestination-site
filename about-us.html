@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+  new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+  "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,"script","dataLayer","GTM-MXLF7R6");</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | My Destination Tours and Travel</title>
+  <meta name="description" content="Learn about My Destination Tours and Travel — a DOT-accredited, PTAA-member travel agency based in Antipolo, Rizal, dedicated to creating exceptional travel experiences since 2018." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== PAGE HERO ===== */
+    .about-hero {
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin-top: 100px;
+    }
+    @media (max-width: 768px) { .about-hero { margin-top: 64px; min-height: 260px; } }
+    .about-hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/hero2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .about-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,79,158,0.88) 0%, rgba(26,146,91,0.75) 100%);
+    }
+    .about-hero__content {
+      position: relative;
+      z-index: 1;
+      padding: 60px 0;
+      color: var(--white);
+    }
+    .about-hero__content .breadcrumb { color: rgba(255,255,255,0.75); font-size: 0.82rem; margin-bottom: 16px; }
+    .about-hero__content .breadcrumb a { color: rgba(255,255,255,0.75); }
+    .about-hero__content .breadcrumb a:hover { color: var(--accent); }
+    .about-hero__content h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
+    .about-hero__content p { font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 560px; }
+
+    /* ===== SECTIONS ===== */
+    .about-section { padding: 80px 0; }
+    .about-section--gray { background: var(--gray-50); }
+
+    /* ===== WHO WE ARE ===== */
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .who-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .who-text h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--text); margin-bottom: 20px; line-height: 1.2; }
+    .who-text h2 span { color: var(--primary); }
+    .who-text p { color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; font-size: 0.97rem; }
+    .who-highlights { display: flex; flex-direction: column; gap: 16px; }
+    .who-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--primary);
+    }
+    .who-highlight__icon { font-size: 1.4rem; color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+    .who-highlight h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .who-highlight p { font-size: 0.85rem; color: var(--gray-600); margin: 0; line-height: 1.6; }
+
+    /* ===== COMPANY DETAILS ===== */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .detail-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+      transition: var(--transition);
+    }
+    .detail-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .detail-card__icon { font-size: 1.6rem; color: var(--primary); margin-bottom: 12px; }
+    .detail-card h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-400); margin-bottom: 6px; }
+    .detail-card p { font-size: 0.95rem; font-weight: 600; color: var(--text); line-height: 1.5; }
+
+    /* ===== MISSION VISION VALUES ===== */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    @media (max-width: 900px) { .mvv-grid { grid-template-columns: 1fr; } }
+    .mvv-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .mvv-card__icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .mvv-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+    .mvv-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.8; }
+
+    /* ===== CULTURE ===== */
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .culture-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+    .culture-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .culture-card__num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .culture-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .culture-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; margin: 0; }
+
+    /* ===== LEADERSHIP ===== */
+    .leadership-section { padding: 80px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); }
+    .leadership-content { text-align: center; color: var(--white); }
+    .leadership-content .section__label { color: var(--accent); }
+    .leadership-content h2 { color: var(--white); margin-bottom: 16px; }
+    .leadership-content p { color: rgba(255,255,255,0.85); max-width: 580px; margin: 0 auto 48px; font-size: 0.97rem; line-height: 1.8; }
+    .leader-card {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 36px 48px;
+      text-align: center;
+    }
+    .leader-card__avatar {
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 0 auto 16px;
+    }
+    .leader-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 6px; }
+    .leader-card p { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin: 0; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500; }
+
+    /* ===== AFFILIATIONS ===== */
+    .affil-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .affil-badge {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 32px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border: 2px solid var(--gray-100);
+      transition: var(--transition);
+    }
+    .affil-badge:hover { border-color: var(--primary); transform: translateY(-3px); }
+    .affil-badge i { font-size: 1.6rem; color: var(--primary); margin-bottom: 8px; display: block; }
+    .affil-badge p { font-size: 0.88rem; font-weight: 600; color: var(--text); margin: 0; max-width: 180px; }
+
+    /* ===== TAGLINE BANNER ===== */
+    .tagline-banner {
+      background: var(--accent);
+      padding: 40px 0;
+      text-align: center;
+    }
+    .tagline-banner h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .tagline-banner p { font-size: 1rem; color: rgba(255,255,255,0.9); margin: 0; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXLF7R6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contacts">
+        <a href="tel:863550222" class="topbar__item"><i class="fa-solid fa-phone"></i><span>8635-5022</span></a>
+        <a href="tel:+639338185552" class="topbar__item"><i class="fa-solid fa-mobile-screen-button"></i><span>0933-818-5552</span></a>
+        <a href="tel:+639279323522" class="topbar__item"><i class="fa-solid fa-mobile-screen-button"></i><span>0927-932-3522</span></a>
+        <a href="mailto:sales@travelwithmyd.com" class="topbar__item"><i class="fa-solid fa-envelope"></i><span>sales@travelwithmyd.com</span></a>
+        <a href="https://facebook.com/mydestinationph" class="topbar__item" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i><span>facebook.com/mydestinationph</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="logo.png" alt="My Destination Tours and Travel" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="tour-packages.html">Tour Packages <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Visa Consultancy <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="japan-tourist-visa.html">Japan Tourist Visa</a></li>
+            <li><a href="korea-tourist-visa.html">Korea Tourist Visa</a></li>
+            <li><a href="usa-tourist-visa.html">USA Tourist Visa</a></li>
+            <li><a href="canada-tourist-visa.html">Canada Tourist Visa and ETA</a></li>
+            <li><a href="schengen-visa.html">Schengen Visa</a></li>
+            <li><a href="india-tourist-visa.html">India Tourist Visa</a></li>
+            <li><a href="turkey-tourist-visa.html">Turkey Tourist Visa</a></li>
+            <li><a href="australia-tourist-visa.html">Australia Tourist Visa</a></li>
+            <li><a href="new-zealand-tourist-visa.html">New Zealand Tourist Visa</a></li>
+          </ul>
+        </li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="about-us.html" class="active">About Us</a></li>
+        <li class="has-dropdown">
+          <a href="#">Resources <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="quote-request.html">Quote Request</a></li>
+            <li><a href="booking-agreement.html">Booking Agreement</a></li>
+            <li><a href="visa-assistance-agreement.html">Visa Assistance Agreement</a></li>
+            <li><a href="card-authorization-form.html">Card Authorization Form</a></li>
+            <li><a href="refund-acknowledgement.html">Refund Acknowledgement</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="about-hero">
+    <div class="about-hero__bg"></div>
+    <div class="about-hero__overlay"></div>
+    <div class="container about-hero__content">
+      <p class="breadcrumb"><a href="index.html">Home</a> › About Us</p>
+      <h1>About My Destination</h1>
+      <p>Your trusted travel partner since 2018 — DOT-accredited, PTAA-member, and always committed to making your journey exceptional.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE ARE ===== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="who-grid">
+        <div class="who-text">
+          <p class="section__label">Who We Are</p>
+          <h2>A Premier Travel Agency Built on <span>Passion and Purpose</span></h2>
+          <p>My Destination Tours and Travel is a premier travel agency committed to providing high-quality travel services to clients all over the world. We are dedicated to creating exceptional travel experiences with an emphasis on personalized attention, customer satisfaction, and unique travel itineraries.</p>
+          <p>We specialize in customizing travel packages to meet our clients' individual needs, interests, and budget. Our team of experienced travel professionals has in-depth knowledge of various travel destinations — their cultures, attractions, and local customs.</p>
+          <p>Our goal is to make travel accessible to everyone, regardless of background, budget, or travel experience. We strive to create a welcoming and inclusive environment that embraces diversity, cultural exchange, and responsible tourism.</p>
+        </div>
+        <div class="who-highlights">
+          <div class="who-highlight">
+            <div class="who-highlight__icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <div>
+              <h4>Personalized Travel Packages</h4>
+              <p>Custom itineraries tailored to your individual needs, interests, and budget — no cookie-cutter trips here.</p>
+            </div>
+          </div>
+          <div class="who-highlight">
+            <div class="who-highlight__icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>Trusted Partnerships</h4>
+              <p>Established partnerships with reputable airlines, hotels, and travel providers to give you the best service at competitive prices.</p>
+            </div>
+          </div>
+          <div class="who-highlight">
+            <div class="who-highlight__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>Transparent &amp; Accountable</h4>
+              <p>We believe in providing accurate, up-to-date information about travel destinations, services, and pricing — always.</p>
+            </div>
+          </div>
+          <div class="who-highlight">
+            <div class="who-highlight__icon"><i class="fa-solid fa-earth-asia"></i></div>
+            <div>
+              <h4>Wide Range of Services</h4>
+              <p>Flights, hotels, visa assistance, travel insurance, tours, and more — all under one roof for your convenience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAGLINE BANNER ===== -->
+  <div class="tagline-banner">
+    <div class="container">
+      <h2>"Your Destination. My Destination."</h2>
+      <p>We treat your journey as our own — because your experience is everything to us.</p>
+    </div>
+  </div>
+
+  <!-- ===== MISSION VISION VALUES ===== -->
+  <section class="about-section about-section--gray">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Our Purpose</p>
+        <h2 class="section__title">Mission, Vision &amp; Values</h2>
+      </div>
+      <div class="mvv-grid">
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>Our mission is tied to our tagline — "Your Destination. My Destination." We treat our clients' destination as our own personal destination. We provide expert services to make travel hassle-free — from the first inquiry to the moment clients return home. Our responsibility doesn't end after booking. Even during travel, we ensure every planned itinerary runs smoothly, nurturing a family-like relationship with our clients.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>We want My Destination to be seen as the most sought-after travel agency and destination management company in the Philippines — doing business locally and internationally, connecting clients and partners across the industry in a prosperous and mutually beneficial cycle.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card__icon"><i class="fa-solid fa-star"></i></div>
+          <h3>Our Values</h3>
+          <p>Honesty and integrity in all of our dealings with clients and suppliers, while keeping a simplistic approach to doing business. We believe in win-win relationships — every partnership we form benefits both parties and contributes to a thriving travel community for everyone involved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPANY DETAILS ===== -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">Company Information</p>
+        <h2 class="section__title">Official Company Details</h2>
+        <p class="section__desc">My Destination Tours and Travel is a fully registered, DOT-accredited travel agency operating since 2018.</p>
+      </div>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-building"></i></div>
+          <h4>Registered Name</h4>
+          <p>MY DESTINATION TOURS AND TRAVEL</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h4>Office Address</h4>
+          <p>3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal 1870</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h4>Date Established</h4>
+          <p>November 26, 2018</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-file-certificate"></i></div>
+          <h4>DTI Registration No.</h4>
+          <p>05051356</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-receipt"></i></div>
+          <h4>Tax Identification Number</h4>
+          <p>224-424-584-000</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card__icon"><i class="fa-solid fa-award"></i></div>
+          <h4>DOT Accreditation No.</h4>
+          <p>RIVA-TTA-000191-2019</p>
+        </div>
+      </div>
+
+      <!-- Affiliations -->
+      <div style="margin-top: 64px;">
+        <div class="section__header" style="margin-bottom: 0;">
+          <p class="section__label">Affiliations</p>
+          <h2 class="section__title">Industry Memberships</h2>
+        </div>
+        <div class="affil-grid">
+          <div class="affil-badge">
+            <i class="fa-solid fa-medal"></i>
+            <p>Philippine Travel Agencies Association (PTAA)</p>
+          </div>
+          <div class="affil-badge">
+            <i class="fa-solid fa-medal"></i>
+            <p>Rizal Travel Agencies Association Inc.</p>
+          </div>
+          <div class="affil-badge">
+            <i class="fa-solid fa-building-columns"></i>
+            <p>Department of Tourism — Accredited Agency</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section class="leadership-section">
+    <div class="container leadership-content">
+      <p class="section__label">Leadership</p>
+      <h2 class="section__title" style="color:white;">The Person Behind My Destination</h2>
+      <p>My Destination is led by a hands-on owner who is deeply committed to building a travel agency that puts clients first and treats every journey with the same care and passion as their own.</p>
+      <div class="leader-card">
+        <div class="leader-card__avatar"><i class="fa-solid fa-user"></i></div>
+        <h3>Angel Ligeralde</h3>
+        <p>Owner / General Manager</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPANY CULTURE ===== -->
+  <section class="about-section about-section--gray">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__label">How We Work</p>
+        <h2 class="section__title">Our Company Culture</h2>
+        <p class="section__desc">The principles that guide how we show up for our clients every single day.</p>
+      </div>
+      <div class="culture-grid">
+        <div class="culture-card">
+          <div class="culture-card__num">1</div>
+          <div>
+            <h4>Casual Yet Professional</h4>
+            <p>We maintain clear policies and professional processes, but we communicate and deal with clients as if they are friends and family — warm, approachable, and genuine.</p>
+          </div>
+        </div>
+        <div class="culture-card">
+          <div class="culture-card__num">2</div>
+          <div>
+            <h4>Expert and Knowledgeable</h4>
+            <p>Many clients come to us unsure about what to do when traveling. We take pride in always providing accurate, up-to-date information and expert guidance that elevates us above the rest.</p>
+          </div>
+        </div>
+        <div class="culture-card">
+          <div class="culture-card__num">3</div>
+          <div>
+            <h4>Courteous and Family-like</h4>
+            <p>We treat every client the way we want to be treated ourselves — with warmth, respect, and a genuine desire to make their experience the best it can be.</p>
+          </div>
+        </div>
+        <div class="culture-card">
+          <div class="culture-card__num">4</div>
+          <div>
+            <h4>Honest and Trustworthy</h4>
+            <p>Our clients give us their full trust when they book with us. We honor that trust by being honest in all our dealings — always transparent, always truthful.</p>
+          </div>
+        </div>
+        <div class="culture-card">
+          <div class="culture-card__num">5</div>
+          <div>
+            <h4>Support from Start to Finish</h4>
+            <p>Our commitment doesn't end at booking. We are with our clients from inquiry, through travel, until they arrive safely back home — every step of the way.</p>
+          </div>
+        </div>
+        <div class="culture-card">
+          <div class="culture-card__num">6</div>
+          <div>
+            <h4>Performance Driven &amp; Always Improving</h4>
+            <p>Our team is driven to succeed — both professionally and personally. We continuously raise our standards to deliver better service with every client interaction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="about-section" style="padding: 80px 0; background: var(--white); text-align: center;">
+    <div class="container">
+      <p class="section__label">Ready to Travel?</p>
+      <h2 class="section__title">Let's Plan Your Next Adventure</h2>
+      <p class="section__desc" style="margin-bottom: 36px;">Choose My Destination Tours and Travel and let us help you create unforgettable travel memories.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="quote-request.html" class="btn btn--primary">Get a Free Quote</a>
+        <a href="index.html#contact" class="btn btn--outline" style="background: var(--primary); border-color: var(--primary); color: white;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-link">
+            <img src="logo.png" alt="My Destination Tours and Travel" class="footer__logo-img" />
+          </a>
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="domestic-packages.html">Domestic Packages</a></li>
+            <li><a href="international-packages.html">International Packages</a></li>
+            <li><a href="blogs.html">Travel Blogs and Articles</a></li>
+          </ul>
+        </div>
+        <div class="footer__accreds">
+          <h4>Accreditations</h4>
+          <div class="accred-list">
+            <div class="accred-item">
+              <strong>PTAA Member No. RE-2024-335</strong>
+              <p>My Destination is a proud member of PTAA – Philippine Travel Agencies Association. Membership valid until December 31, 2026.</p>
+            </div>
+            <div class="accred-item">
+              <strong>DOT-R4A-TTA-00013-2020</strong>
+              <p>My Destination is an accredited travel and tours agency by the Department of Tourism of the Republic of the Philippines. Valid until June 30, 2027.</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <h4>Address and Contact Information</h4>
+          <ul>
+            <li>3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal</li>
+            <li><a href="mailto:sales@travelwithmyd.com">sales@travelwithmyd.com</a></li>
+            <li><a href="tel:863550222">8635-5022 (PLDT)</a></li>
+            <li><a href="tel:+639338185552">0933-818-5552 (Smart/Sun)</a></li>
+            <li><a href="tel:+639279323522">0927-932-3522 (Globe)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 My Destination Tours and Travel. All rights reserved.</p>
+        <p>Antipolo City, Rizal, Philippines</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
