@@ -473,7 +473,8 @@
       </div>
 
       <div class="visa-form-wrap">
-        <form action="thank-you.html" method="GET">
+        <form name="usa-visa-inquiry" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="usa-visa-inquiry" />
               <input type="hidden" name="source_page" value="usa-tourist-visa" />
 
           <div class="form-row">
