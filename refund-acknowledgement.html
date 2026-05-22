@@ -45,26 +45,79 @@
 
   <section class="agreement-hero"><div class="container"><h1>Refund Acknowledgement Receipt</h1><p>Booking Refund Confirmation Document</p><div style="margin-top:24px;"><button onclick="downloadPDF()" class="btn btn--primary" style="background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.8);color:#fff;font-size:0.95rem;padding:12px 28px;cursor:pointer;"><i class="fa-solid fa-file-pdf" style="margin-right:8px;"></i>Download PDF</button></div></div></section>
 
-  <section class="agreement-body"><div class="container"><div class="agreement-container"><h2>Refund Acknowledgement Receipt</h2><p>This document confirms that the signatory on this form was able to receive the REFUND for the booking that they made with My Destination Tours and Travel as specified below:</p><table class="refund-table"><tr><th>Booking Details</th><th>Information</th></tr><tr><td><strong>Booking ID</strong></td><td>_________________________________</td></tr><tr><td><strong>Passenger Name</strong></td><td>_________________________________</td></tr><tr><td><strong>Reason for Refund</strong></td><td>_________________________________</td></tr><tr><td><strong>Refund Amount</strong></td><td>_________________________________</td></tr><tr><td><strong>Amount in Words</strong></td><td>_________________________________</td></tr><tr><td><strong>Received By</strong></td><td>_________________________________</td></tr></table><h2>Refund Terms</h2><p><strong>Important:</strong> By affixing your signature on this document, you fully understand that the refund was determined by the airlines and applicable charges were deducted on the amount based on their terms and conditions.</p><p>You hereby release <strong>MY DESTINATION TOURS AND TRAVEL</strong> from any liability and responsibility that may arise from this cancelled booking.</p><h2>Acknowledgement</h2><p>The signatory confirms that they have received the refund amount as stated above and release My Destination Tours and Travel from any further claims or disputes related to this cancelled booking.</p><p><strong>Signature:</strong> _________________________________</p><p><strong>Name (Printed):</strong> _________________________________</p><p><strong>Date:</strong> _________________________________</p><p><strong>ID Presented:</strong> _________________________________</p></div></div></section>
+  <section class="agreement-body"><div class="container"><div class="agreement-container"><h2>Refund Acknowledgement Receipt</h2><p>This document confirms that the signatory on this form was able to receive the REFUND for the booking that they made with My Destination Tours and Travel as specified below:</p><table class="refund-table"><tr><th>Booking Details</th><th>Information</th></tr><tr><td><strong>Booking ID</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr><tr><td><strong>Passenger Name</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr><tr><td><strong>Reason for Refund</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr><tr><td><strong>Refund Amount</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr><tr><td><strong>Amount in Words</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr><tr><td><strong>Received By</strong></td><td><span style="display:block;border-bottom:1px solid #555;min-height:28px;width:100%;"></span></td></tr></table><h2>Refund Terms</h2><p><strong>Important:</strong> By affixing your signature on this document, you fully understand that the refund was determined by the airlines and applicable charges were deducted on the amount based on their terms and conditions.</p><p>You hereby release <strong>MY DESTINATION TOURS AND TRAVEL</strong> from any liability and responsibility that may arise from this cancelled booking.</p><h2>Acknowledgement</h2><p>The signatory confirms that they have received the refund amount as stated above and release My Destination Tours and Travel from any further claims or disputes related to this cancelled booking.</p><div style="margin-bottom:20px;"><p style="font-weight:700;margin-bottom:4px;">Signature:</p><div style="border-bottom:1px solid #333;min-height:40px;"></div></div><div style="margin-bottom:20px;"><p style="font-weight:700;margin-bottom:4px;">Name (Printed):</p><div style="border-bottom:1px solid #333;min-height:40px;"></div></div><div style="margin-bottom:20px;"><p style="font-weight:700;margin-bottom:4px;">Date:</p><div style="border-bottom:1px solid #333;min-height:40px;"></div></div><div style="margin-bottom:20px;"><p style="font-weight:700;margin-bottom:4px;">ID Presented:</p><div style="border-bottom:1px solid #333;min-height:40px;"></div></div></div></div></section>
 
   <footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__brand"><a href="index.html" class="footer__logo-link"><img src="logo.png" alt="My Destination Tours and Travel" class="footer__logo-img" /></a><h4>Sitemap</h4><ul><li><a href="index.html">Home</a></li><li><a href="domestic-packages.html">Domestic Packages</a></li><li><a href="international-packages.html">International Packages</a></li><li><a href="usa-tourist-visa.html">Visa Assistance</a></li><li><a href="blogs.html">Travel Blogs and Articles</a></li></ul></div><div class="footer__accreds"><h4>Accreditations</h4><div class="accred-list"><div class="accred-item"><strong>PTAA Member No. RE-2024-335</strong><p>My Destination is a proud member of PTAA – Philippine Travel Agencies Association. Membership valid until December 31, 2026.</p></div><div class="accred-item"><strong>DOT-R4A-TTA-00013-2020</strong><p>My Destination is an accredited travel and tours agency by the Department of Tourism of the Republic of the Philippines. Valid until June 30, 2027.</p></div></div></div><div class="footer__contact"><h4>Address and Contact Information</h4><ul><li>3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal</li><li><a href="mailto:sales@travelwithmyd.com">sales@travelwithmyd.com</a></li><li><a href="tel:863550222">8635-5022 (PLDT)</a></li><li><a href="tel:+639338185552">0933-818-5552 (Smart/Sun)</a></li><li><a href="tel:+639279323522">0927-932-3522 (Globe)</a></li></ul></div></div><div class="footer__bottom"><p>© 2025 My Destination Tours and Travel. All rights reserved.</p><p>Antipolo City, Rizal, Philippines</p></div></div></footer>
 
   <script src="script.js"></script>
   <script>
   function downloadPDF() {
-    const btn = document.querySelector('.download-btn');
-    if (btn) btn.style.display = 'none';
-    const element = document.querySelector('.agreement-container');
-    const filename = document.title.replace(' | My Destination Tours and Travel','').trim().replace(/ /g, '-').toLowerCase() + '.pdf';
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    const agreementName = document.title.replace(' | My Destination Tours and Travel', '').trim();
+    const isRefund = agreementName.toLowerCase().includes('refund');
+
+    const header = `
+      <div style="text-align:center;border-bottom:3px solid #1a925b;padding-bottom:16px;margin-bottom:28px;">
+        <h2 style="font-size:18px;font-weight:800;color:#1a925b;margin:0 0 6px;font-family:Arial,sans-serif;">My Destination Tours and Travel</h2>
+        <p style="font-size:10px;color:#555;margin:3px 0;font-family:Arial,sans-serif;">3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal, Philippines</p>
+        <p style="font-size:10px;color:#555;margin:3px 0;font-family:Arial,sans-serif;">Tel: 8635-5022 / 0933-818-5552 &nbsp;&nbsp;|&nbsp;&nbsp; Email: sales@travelwithmyd.com &nbsp;&nbsp;|&nbsp;&nbsp; www.travelwithmyd.com</p>
+      </div>`;
+
+    const signatureArea = `
+      <div style="margin-top:40px;padding-top:20px;border-top:2px solid #1a925b;">
+        <p style="font-size:13px;font-weight:700;color:#1a925b;margin:0 0 20px;font-family:Arial,sans-serif;">CLIENT ACKNOWLEDGEMENT</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:24px;">
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Signature</p>
+          </div>
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Printed Name</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:24px;">
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Date</p>
+          </div>
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Booking ID / PNR / Reference Number</p>
+          </div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+          <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Other Details</p>
+        </div>
+      </div>`;
+
+    const footer = `
+      <div style="border-top:1px solid #ccc;margin-top:32px;padding-top:10px;display:flex;justify-content:space-between;font-size:9px;color:#999;font-family:Arial,sans-serif;">
+        <span>My Destination Tours and Travel</span>
+        <span>${agreementName}</span>
+        <span>Version: ${dateStr}</span>
+      </div>`;
+
+    const sourceElement = document.querySelector('.agreement-container');
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'font-family:Arial,sans-serif;padding:8px;background:white;color:#222;line-height:1.6;';
+    wrapper.innerHTML = header + sourceElement.innerHTML + (isRefund ? '' : signatureArea) + footer;
+
+    document.body.appendChild(wrapper);
+
+    const filename = agreementName.replace(/ /g, '-').toLowerCase() + '.pdf';
     const opt = {
-      margin: [10, 10, 10, 10],
+      margin: [12, 14, 12, 14],
       filename: filename,
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
-    html2pdf().set(opt).from(element).save().then(function() {
-      if (btn) btn.style.display = '';
+
+    html2pdf().set(opt).from(wrapper).save().then(function() {
+      document.body.removeChild(wrapper);
     });
   }
   </script>
