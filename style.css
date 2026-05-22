@@ -227,6 +227,42 @@ img { max-width: 100%; display: block; }
   padding-left: 24px;
 }
 
+/* Nested dropdowns */
+.dropdown .has-dropdown {
+  position: relative;
+}
+.dropdown .has-dropdown > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 0.87rem;
+  color: var(--gray-600);
+  font-weight: 400;
+  transition: var(--transition);
+}
+.dropdown .has-dropdown > a:hover {
+  background: var(--gray-50);
+  color: var(--primary);
+  padding-left: 24px;
+}
+.dropdown .has-dropdown > a .arrow {
+  margin-left: 8px;
+  transform: rotate(-90deg);
+}
+.dropdown .dropdown {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 8px);
+  min-width: 200px;
+}
+.dropdown .has-dropdown:hover > .dropdown,
+.dropdown .has-dropdown.open > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .nav__toggle {
   display: none;
   flex-direction: column;
