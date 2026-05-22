@@ -56,7 +56,19 @@ if (navToggle && navLinks) {
       const isMobile = window.innerWidth <= 768;
       if (isMobile) {
         e.preventDefault();
+        e.stopPropagation();
         const parent = toggle.parentElement;
+        const isOpen = parent.classList.contains('open');
+
+        // Close all sibling dropdowns
+        const parentList = parent.parentElement;
+        parentList.querySelectorAll('.has-dropdown.open').forEach(openDropdown => {
+          if (openDropdown !== parent) {
+            openDropdown.classList.remove('open');
+          }
+        });
+
+        // Toggle current dropdown
         parent.classList.toggle('open');
       }
     });

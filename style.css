@@ -255,6 +255,7 @@ img { max-width: 100%; display: block; }
   top: 0;
   left: calc(100% + 8px);
   min-width: 200px;
+  z-index: 200;
 }
 .dropdown .has-dropdown:hover > .dropdown,
 .dropdown .has-dropdown.open > .dropdown {
