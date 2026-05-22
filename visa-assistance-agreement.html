@@ -51,19 +51,72 @@
   <script src="script.js"></script>
   <script>
   function downloadPDF() {
-    const btn = document.querySelector('.download-btn');
-    if (btn) btn.style.display = 'none';
-    const element = document.querySelector('.agreement-container');
-    const filename = document.title.replace(' | My Destination Tours and Travel','').trim().replace(/ /g, '-').toLowerCase() + '.pdf';
+    const today = new Date();
+    const dateStr = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    const agreementName = document.title.replace(' | My Destination Tours and Travel', '').trim();
+    const isRefund = agreementName.toLowerCase().includes('refund');
+
+    const header = `
+      <div style="text-align:center;border-bottom:3px solid #1a925b;padding-bottom:16px;margin-bottom:28px;">
+        <h2 style="font-size:18px;font-weight:800;color:#1a925b;margin:0 0 6px;font-family:Arial,sans-serif;">My Destination Tours and Travel</h2>
+        <p style="font-size:10px;color:#555;margin:3px 0;font-family:Arial,sans-serif;">3F SM Center Antipolo Downtown, Marcos Highway, Brgy. Mayamot, Antipolo, Rizal, Philippines</p>
+        <p style="font-size:10px;color:#555;margin:3px 0;font-family:Arial,sans-serif;">Tel: 8635-5022 / 0933-818-5552 &nbsp;&nbsp;|&nbsp;&nbsp; Email: sales@travelwithmyd.com &nbsp;&nbsp;|&nbsp;&nbsp; www.travelwithmyd.com</p>
+      </div>`;
+
+    const signatureArea = `
+      <div style="margin-top:40px;padding-top:20px;border-top:2px solid #1a925b;">
+        <p style="font-size:13px;font-weight:700;color:#1a925b;margin:0 0 20px;font-family:Arial,sans-serif;">CLIENT ACKNOWLEDGEMENT</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:24px;">
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Signature</p>
+          </div>
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Printed Name</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:24px;">
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Date</p>
+          </div>
+          <div>
+            <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+            <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Booking ID / PNR / Reference Number</p>
+          </div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="border-bottom:1px solid #333;min-height:44px;margin-bottom:5px;"></div>
+          <p style="font-size:10px;color:#555;margin:0;font-family:Arial,sans-serif;">Other Details</p>
+        </div>
+      </div>`;
+
+    const footer = `
+      <div style="border-top:1px solid #ccc;margin-top:32px;padding-top:10px;display:flex;justify-content:space-between;font-size:9px;color:#999;font-family:Arial,sans-serif;">
+        <span>My Destination Tours and Travel</span>
+        <span>${agreementName}</span>
+        <span>Version: ${dateStr}</span>
+      </div>`;
+
+    const sourceElement = document.querySelector('.agreement-container');
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'font-family:Arial,sans-serif;padding:8px;background:white;color:#222;line-height:1.6;';
+    wrapper.innerHTML = header + sourceElement.innerHTML + (isRefund ? '' : signatureArea) + footer;
+
+    document.body.appendChild(wrapper);
+
+    const filename = agreementName.replace(/ /g, '-').toLowerCase() + '.pdf';
     const opt = {
-      margin: [10, 10, 10, 10],
+      margin: [12, 14, 12, 14],
       filename: filename,
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
-    html2pdf().set(opt).from(element).save().then(function() {
-      if (btn) btn.style.display = '';
+
+    html2pdf().set(opt).from(wrapper).save().then(function() {
+      document.body.removeChild(wrapper);
     });
   }
   </script>
