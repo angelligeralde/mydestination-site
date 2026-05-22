@@ -256,12 +256,16 @@ img { max-width: 100%; display: block; }
   left: calc(100% + 8px);
   min-width: 200px;
   z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 .dropdown .has-dropdown:hover > .dropdown,
 .dropdown .has-dropdown.open > .dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .nav__toggle {
