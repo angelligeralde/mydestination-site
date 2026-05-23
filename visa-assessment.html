@@ -766,31 +766,12 @@
 
             <div class="result-callout" id="resultCallout"></div>
 
-            <p style="font-size:0.82rem;color:var(--gray-600);margin-bottom:24px;">Confirm your details below and we'll send your personalized assessment to your email — completely free.</p>
-
-            <!-- Submission form -->
-            <div class="submit-confirm" id="submitConfirm">
-              <div class="field-row">
-                <div class="field-group" id="fg_r_name">
-                  <label class="field-label" for="r_name">Full Name <span class="req">*</span></label>
-                  <input class="text-input" type="text" id="r_name" placeholder="Juan dela Cruz" />
-                  <div class="field-error">Please enter your name.</div>
-                </div>
-                <div class="field-group" id="fg_r_phone">
-                  <label class="field-label" for="r_phone">Phone / Viber <span class="req">*</span></label>
-                  <input class="text-input" type="tel" id="r_phone" placeholder="09XX-XXX-XXXX" />
-                  <div class="field-error">Please enter your phone number.</div>
-                </div>
-              </div>
-              <div class="field-group" id="fg_r_email">
-                <label class="field-label" for="r_email">Email Address <span class="req">*</span></label>
-                <input class="text-input" type="email" id="r_email" placeholder="your@email.com" />
-                <div class="field-error">Please enter a valid email address.</div>
-              </div>
-              <button class="btn-submit" id="btnSubmit" type="button">
-                <i class="fa-solid fa-paper-plane"></i> Get My Free Visa Assessment
+            <!-- Submit button -->
+            <div id="submitConfirm" style="text-align:center;margin-top:8px;">
+              <button class="btn-submit" id="btnSubmit" type="button" style="max-width:360px;margin:0 auto;">
+                <i class="fa-solid fa-paper-plane"></i> Send Me My Full Assessment
               </button>
-              <p class="consent">By submitting, you agree to be contacted by our visa consultants via phone, Viber, or email. We will never share your information with third parties.</p>
+              <p class="consent" style="margin-top:12px;">We'll send your personalized assessment results to the email you provided. We will never share your information with third parties.</p>
             </div>
 
             <!-- Confirmation message (shown after submit) -->
@@ -1018,28 +999,10 @@
     // --- Submit ---
 
     document.getElementById('btnSubmit').addEventListener('click', () => {
-      // Validate contact fields in result step
-      let ok = true;
-      const rName  = document.getElementById('r_name');
-      const rPhone = document.getElementById('r_phone');
-      const rEmail = document.getElementById('r_email');
-
-      const fgRN = document.getElementById('fg_r_name');
-      const fgRP = document.getElementById('fg_r_phone');
-      const fgRE = document.getElementById('fg_r_email');
-
-      fgRN.classList.toggle('has-error', rName.value.trim().length < 2);
-      fgRP.classList.toggle('has-error', rPhone.value.trim().length < 7);
-      fgRE.classList.toggle('has-error', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rEmail.value));
-
-      if (fgRN.classList.contains('has-error') ||
-          fgRP.classList.contains('has-error') ||
-          fgRE.classList.contains('has-error')) return;
-
-      // Push values to hidden form
-      document.getElementById('f_name').value        = rName.value;
-      document.getElementById('f_email').value       = rEmail.value;
-      document.getElementById('f_phone').value       = rPhone.value;
+      // Pull contact info from page 1 fields
+      document.getElementById('f_name').value        = document.getElementById('name').value;
+      document.getElementById('f_email').value       = document.getElementById('email').value;
+      document.getElementById('f_phone').value       = document.getElementById('phone').value;
       document.getElementById('f_destination').value = document.getElementById('destination').value;
 
       // Collect radio values
@@ -1088,9 +1051,6 @@
         .finally(() => {
           document.getElementById('submitConfirm').style.display = 'none';
           document.getElementById('submitSuccess').style.display  = 'block';
-          document.querySelector('.result-callout').style.display = 'none';
-          document.querySelector('.score-bar-wrap').style.display = 'none';
-          document.querySelector('[style*="margin-bottom:24px"]').style.display = 'none';
         });
     });
 
