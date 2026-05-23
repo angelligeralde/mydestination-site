@@ -869,12 +869,12 @@
     function validateStep0() {
       let ok = true;
       const checks = [
-        { id: 'name',        fg: 'fg_name',        test: v => v.trim().length > 1 },
-        { id: 'phone',       fg: 'fg_phone',       test: v => v.trim().length > 6 },
-        { id: 'email',       fg: 'fg_email',       test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-        { id: 'destination', fg: 'fg_destination', test: v => v.trim().length > 1 },
+        { id: 'name',        test: v => v.trim().length > 1 },
+        { id: 'phone',       test: v => v.trim().length > 6 },
+        { id: 'email',       test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { id: 'destination', test: v => v.trim().length > 1 },
       ];
-      checks.forEach(({ id, fg, test }) => {
+      checks.forEach(({ id, test }) => {
         const el = document.getElementById(id);
         const fg = document.getElementById('fg_' + id);
         const valid = test(el.value);
