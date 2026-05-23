@@ -202,20 +202,32 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ===== MARQUEE PROMO ===== -->
-  <a href="https://mydestinationtoursandtravel.com/visa-assessment.html" target="_blank" rel="noopener" style="display:block;background:#F4A61C;overflow:hidden;white-space:nowrap;padding:9px 0;text-decoration:none;">
-    <div style="display:inline-block;animation:marquee 28s linear infinite;">
-      <span style="font-family:'Poppins',sans-serif;font-size:0.82rem;font-weight:700;color:#1a1a2e;letter-spacing:0.03em;">
-        🌍 Find out your chances of getting a tourist visa — Take our FREE Visa Assessment now! &nbsp;&nbsp;&nbsp;✈️ FREE Tourist Visa Assessment — Click here to get started! &nbsp;&nbsp;&nbsp;🌍 Find out your chances of getting a tourist visa — Take our FREE Visa Assessment now! &nbsp;&nbsp;&nbsp;✈️ FREE Tourist Visa Assessment — Click here to get started! &nbsp;&nbsp;&nbsp;
-      </span>
-    </div>
-  </a>
   <style>
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    /* Marquee is inside the topbar, so topbar is now taller on desktop (~72px) */
+    @media (min-width: 769px) {
+      .header { top: 72px !important; }
+      .hero__content { padding-top: 196px; }
+    }
+    /* On mobile: topbar is normally hidden, but we show it just for the marquee */
+    @media (max-width: 768px) {
+      .topbar { display: block !important; }
+      .topbar__inner { display: none; }
+      .header { top: 36px !important; }
+      .hero__content { padding-top: 130px; }
+    }
   </style>
 
   <!-- ===== TOP BAR ===== -->
   <div class="topbar">
+    <!-- Marquee row -->
+    <a href="https://mydestinationtoursandtravel.com/visa-assessment.html" target="_blank" rel="noopener" style="display:block;background:#F4A61C;overflow:hidden;white-space:nowrap;padding:8px 0;text-decoration:none;">
+      <div style="display:inline-block;animation:marquee-scroll 28s linear infinite;white-space:nowrap;">
+        <span style="font-family:'Poppins',sans-serif;font-size:0.82rem;font-weight:700;color:#1a1a2e;letter-spacing:0.03em;">
+          🌍 Find out your chances of getting a tourist visa — Take our FREE Visa Assessment now! &nbsp;&nbsp;&nbsp;&nbsp;✈️ FREE Tourist Visa Assessment — Click here to get started! &nbsp;&nbsp;&nbsp;&nbsp;🌍 Find out your chances of getting a tourist visa — Take our FREE Visa Assessment now! &nbsp;&nbsp;&nbsp;&nbsp;✈️ FREE Tourist Visa Assessment — Click here to get started! &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </div>
+    </a>
     <div class="container topbar__inner">
       <div class="topbar__contacts">
         <a href="tel:+63286355022" class="topbar__item">
