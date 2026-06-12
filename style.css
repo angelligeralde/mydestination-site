@@ -129,6 +129,22 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(244,166,28,0.4);
 }
+
+/* Hero Contact Us button — pulsing glow */
+@keyframes heroButtonGlow {
+  from { box-shadow: 0 0 14px rgba(244,166,28,0.55), 0 0 28px rgba(244,166,28,0.25), 0 4px 16px rgba(244,166,28,0.35); }
+  to   { box-shadow: 0 0 28px rgba(244,166,28,0.85), 0 0 56px rgba(244,166,28,0.45), 0 4px 20px rgba(244,166,28,0.5); }
+}
+.hero__actions .btn--primary {
+  animation: heroButtonGlow 1.8s ease-in-out infinite alternate;
+}
+.hero__actions .btn--primary:hover {
+  background: #000;
+  color: var(--white);
+  transform: translateY(-2px);
+  animation: none;
+  box-shadow: 0 0 28px rgba(244,166,28,0.9), 0 0 56px rgba(244,166,28,0.5), 0 8px 24px rgba(244,166,28,0.4);
+}
 .btn--outline {
   background: transparent;
   color: var(--white);
@@ -314,7 +330,8 @@ img { max-width: 100%; display: block; }
   z-index: 1;
   padding-top: 160px;
   padding-bottom: 60px;
-  max-width: 700px;
+  max-width: 100%;
+  width: 100%;
 }
 .hero__tagline {
   font-size: 0.78rem;
@@ -404,7 +421,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--gray-100);
 }
 .service-card:hover {
-  transform: translateY(-6px);
+  transform: scale(1.05);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary-light);
 }
@@ -542,8 +559,13 @@ img { max-width: 100%; display: block; }
   padding: 28px 20px;
   text-align: center;
   transition: var(--transition);
+  box-shadow: 0 0 18px rgba(244,166,28,0.25), 0 0 36px rgba(244,166,28,0.1);
 }
-.whyus__card:hover { background: rgba(255,255,255,0.18); transform: translateY(-4px); }
+.whyus__card:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(244,166,28,0.5), 0 0 56px rgba(244,166,28,0.25);
+}
 .stat-number {
   font-size: 2.2rem;
   font-weight: 800;
@@ -1165,7 +1187,8 @@ img { max-width: 100%; display: block; }
   background: var(--gray-50);
   border-radius: var(--radius-lg);
   padding: 40px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), 0 0 28px rgba(244,166,28,0.35), 0 0 56px rgba(244,166,28,0.15);
+  border: 1px solid rgba(244,166,28,0.25);
 }
 .form-row {
   display: grid;
@@ -2217,7 +2240,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== FAQ SECTION ===== */
 .faq-section { background: var(--gray-50); padding: 80px 0; }
-.faq-section .container { max-width: 880px; }
+.faq-section .container { max-width: 1200px; }
 .faq-section__header { text-align: center; margin-bottom: 48px; }
 .faq-section__header .section__label { color: var(--accent); }
 .faq-section__header h2 {
