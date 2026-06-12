@@ -347,6 +347,7 @@ img { max-width: 100%; display: block; }
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 20px;
+  text-shadow: 2px 4px 12px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.5);
 }
 .hero__title span { color: var(--accent); }
 .hero__subtitle {
